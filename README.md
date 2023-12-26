@@ -23,8 +23,10 @@ For **development**:
 - `poetry install`
 - `poetry shell` to activate the virtual environment
 - sudo apt-get install python3-tk 
-
 - gpte projects/example
+
+sdk install java 17.0.4.1-tem
+
 
 We actively support Python 3.10 - 3.11.
 
