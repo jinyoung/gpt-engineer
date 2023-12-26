@@ -22,6 +22,9 @@ For **development**:
 - `cd gpt-engineer`
 - `poetry install`
 - `poetry shell` to activate the virtual environment
+- sudo apt-get install python3-tk 
+
+- gpte projects/example
 
 We actively support Python 3.10 - 3.11.
 

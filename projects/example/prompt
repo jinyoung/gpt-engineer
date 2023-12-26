@@ -1,1 +1,113 @@
-We are writing snake in python. MVC components split in separate files. Keyboard control.
+아래의 이벤트스토밍 모델을 구현한 코드를 생성해줘:
+
+    "boundedContext": {
+        "주문-관리": {
+            "koName": "주문 관리",
+            "aggregates": [
+                {
+                    "name": "주문",
+                    "koName": "주문",
+                    "koDescription": "사용자가 음식을 주문하고 음식점과 배달 기사와 상호작용하는 주문 엔터티",
+                    "properties": [
+                        {
+                            "name": "주문번호",
+                            "koName": "주문번호",
+                            "type": "String",
+                            "isKey": true,
+                            "uiStyle": {
+                                "inputUI": "TEXT"
+                            }
+                        },
+                        {
+                            "name": "주문상태",
+                            "koName": "주문상태",
+                            "type": "String",
+                            "uiStyle": {
+                                "inputUI": "TEXT"
+                            }
+                        }
+                    ],
+                    "commands": [
+                        {
+                            "name": "주문생성",
+                            "koName": "주문 생성",
+                            "properties": [
+                                {
+                                    "name": "메뉴",
+                                    "koName": "메뉴",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "배송주소",
+                                    "koName": "배송 주소",
+                                    "type": "String"
+                                }
+                            ],
+                            "api_verb": "POST",
+                            "isCreation": true,
+                            "actor": "사용자",
+                            "outputEvents": ["주문생성이벤트"],
+                            "uiStyle": {
+                                "icon": "add_circle_outline"
+                            }
+                        }
+                    ],
+                    "events": [
+                        {
+                            "name": "주문생성이벤트",
+                            "koName": "주문 생성 이벤트",
+                            "properties": [
+                                {
+                                    "name": "주문번호",
+                                    "koName": "주문번호",
+                                    "type": "String",
+                                    "isKey": true
+                                },
+                                {
+                                    "name": "주문상태",
+                                    "koName": "주문상태",
+                                    "type": "String"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+
+
+
+Test Scenario: 
+
+{
+    command: "주문생성"
+    given:[{
+
+    }],
+    when: {
+        type: "Command",
+        name: "주문생성"
+        value: {
+         "메뉴": "짬뽕",
+         "배송주소": "용인시 처인구" 
+        }
+    },
+    then: [{
+        type: "Event",
+        name: "주문생성이벤트",
+        value: {
+            "주문번호": "1",
+            "주문상태": "ORDERED"
+        }
+    }]
+}
+
+
+구현 아키텍처와 사용기술은 아래와 같아:
+
+- clean architecture
+- spring-boot3
+- JPA
+- Kafka with spring-cloud-streams
+- JUnit Test
+
