@@ -110,6 +110,6 @@ Test Scenario:
 - JPA (must use package jakarta.persistence.* instead of javax.persistence.*)
 - H2 DB
 - Lombok
-- Kafka with spring-cloud-streams
+- Kafka with spring-cloud-streams library
 - JUnit Test
 

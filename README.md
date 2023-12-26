@@ -18,12 +18,12 @@ For **stable** release:
 - `python -m pip install gpt-engineer`
 
 For **development**:
-- `git clone https://github.com/AntonOsika/gpt-engineer.git`
-- `cd gpt-engineer`
-- `poetry install`
-- `poetry shell` to activate the virtual environment
-- sudo apt-get install python3-tk 
-- gpte projects/example
+
+```
+poetry install
+poetry shell
+sudo apt-get install python3-tk 
+gpte projects/example
 
 sdk install java 17.0.4.1-tem
 
