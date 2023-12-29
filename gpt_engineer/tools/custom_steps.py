@@ -16,7 +16,7 @@ from gpt_engineer.core.preprompts_holder import PrepromptsHolder
 
 # Type hint for chat messages
 Message = Union[AIMessage, HumanMessage, SystemMessage]
-MAX_SELF_HEAL_ATTEMPTS = 2
+MAX_SELF_HEAL_ATTEMPTS = 10
 
 
 def get_platform_info():
@@ -77,6 +77,10 @@ def self_heal(
         stdout_full, stderr_full, returncode = execution_env.upload(files_dict).run(
             f"bash {ENTRYPOINT_FILE}"
         )
+
+        if 'BUILD FAILURE' in stdout_full:
+            returncode = -1 
+
         # get the result and output
         # step 2. if the return code not 0, package and send to the AI
         if returncode != 0:
