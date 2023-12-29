@@ -13,6 +13,7 @@ services:
     ##  OR set the API key directly
     # environment:
       # - OPENAI_API_KEY=YOUR_API_KEY
-    image: gpt-engineer
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+    command: ["-c"]
     volumes:
       - ./projects/example:/project
