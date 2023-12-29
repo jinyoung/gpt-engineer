@@ -61,18 +61,18 @@ def self_heal(
     preprompts = preprompts_holder.get_preprompts()
     while attempts < MAX_SELF_HEAL_ATTEMPTS:
         command = files_dict[ENTRYPOINT_FILE]
-        print(
-            colored(
-                "Do you want to execute this code? (Y/n)",
-                "red",
-            )
-        )
+        # print(
+        #     colored(
+        #         "Do you want to execute this code? (Y/n)",
+        #         "red",
+        #     )
+        # )
         print()
         print(command)
         print()
-        if input("").lower() not in ["", "y", "yes"]:
-            print("Ok, not executing the code.")
-            return files_dict
+        # if input("").lower() not in ["", "y", "yes"]:
+        #     print("Ok, not executing the code.")
+        #     return files_dict
         print("Executing the code...")
         stdout_full, stderr_full, returncode = execution_env.upload(files_dict).run(
             f"bash {ENTRYPOINT_FILE}"
