@@ -89,35 +89,35 @@ def execute_entrypoint(
             + " does not exist in the code."
         )
 
-    # command = files_dict[ENTRYPOINT_FILE]
-    # traceback.print_stack()
-    # print()
-    # print(
-    #     colored(
-    #         "Do you want to execute this code? (Y/n)",
-    #         "red",
-    #     )
-    # )
-    # print()
-    # print(command)
-    # print()
-    # if input("").lower() not in ["", "y", "yes"]:
-    #     print("Ok, not executing the code.")
-    #     return files_dict
-    # print("Executing the code...")
-    # print()
-    # print(
-    #     colored(
-    #         "Note: If it does not work as expected, consider running the code"
-    #         + " in another way than above.",
-    #         "green",
-    #     )
-    # )
-    # print()
-    # print("You can press ctrl+c *once* to stop the execution.")
-    # print()
+    command = files_dict[ENTRYPOINT_FILE]
+#    traceback.print_stack()
+    print()
+    print(
+        colored(
+            "Do you want to execute this code? (Y/n)",
+            "red",
+        )
+    )
+    print()
+    print(command)
+    print()
+    if input("").lower() not in ["", "y", "yes"]:
+        print("Ok, not executing the code.")
+        return files_dict
+    print("Executing the code...")
+    print()
+    print(
+        colored(
+            "Note: If it does not work as expected, consider running the code"
+            + " in another way than above.",
+            "green",
+        )
+    )
+    print()
+    print("You can press ctrl+c *once* to stop the execution.")
+    print()
 
-    # execution_env.upload(files_dict).run(f"bash {ENTRYPOINT_FILE}")
+    execution_env.upload(files_dict).run(f"bash {ENTRYPOINT_FILE}")
     return files_dict
 
 

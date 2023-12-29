@@ -23,7 +23,7 @@ For **development**:
 poetry install
 poetry shell
 sudo apt-get install python3-tk 
-gpte projects/example
+gpte projects/hello
 
 sdk install java 17.0.4.1-tem
 
