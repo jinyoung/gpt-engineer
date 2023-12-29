@@ -15,3 +15,9 @@ I want to utilize following techniques:
 - Lombok
 - Kafka with spring-cloud-streams library
 - JUnit Test
+
+when you create execution shell (run.sh), please add '--no-transfer-progress' option not to output transfer progress if there's mvn command:
+
+```
+mvn [command] --no-transfer-progress
+```

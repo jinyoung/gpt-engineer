@@ -1,1 +1,7 @@
 화면에 Helloworld 찍는 간단한 maven 기반의 java app
+
+when you create execution shell (run.sh), please add '--no-transfer-progress' option not to output transfer progress if there's mvn command:
+
+```
+mvn [command] --no-transfer-progress
+```
