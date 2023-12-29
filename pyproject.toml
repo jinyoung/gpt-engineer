@@ -63,6 +63,7 @@ rank-bm25 = ">=0.2.2"
 tree_sitter_languages = ">=1.8.0"
 
 [tool.poetry.scripts]
+my_project = 'gpt_engineer.applications.cli.main:run'
 gpt-engineer = 'gpt_engineer.applications.cli.main:app'
 ge = 'gpt_engineer.applications.cli.main:app'
 gpte = 'gpt_engineer.applications.cli.main:app'

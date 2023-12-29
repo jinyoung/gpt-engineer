@@ -61,13 +61,13 @@ class DiskExecutionEnv(BaseExecutionEnv):
                 assert p.stdout is not None
                 assert p.stderr is not None
                 stdout = p.stdout.readline()
-                stderr = p.stderr.readline()
+ #               stderr = p.stderr.readline()
                 if stdout:
                     print(stdout, end="")
                     stdout_full += stdout
-                if stderr:
-                    print(stderr, end="")
-                    stderr_full += stderr
+                # if stderr:
+                #     print(stderr, end="")
+                #     stderr_full += stderr
                 if timeout and time.time() - start > timeout:
                     print("Timeout!")
                     p.kill()

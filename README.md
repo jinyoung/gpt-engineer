@@ -30,6 +30,19 @@ sdk install java 17.0.4.1-tem
 
 We actively support Python 3.10 - 3.11.
 
+
+## Debug Mode in VSCode
+
+Firstly, for easy of tool support, create the requiremnent.txt
+```
+poetry export -f requirements.txt -o requirements.txt --without-hashes
+```
+
+And create a launch.json:
+```
+
+```
+
 ### Setup API Key
 
 Choose **one** of:
