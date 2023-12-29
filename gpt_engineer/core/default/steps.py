@@ -92,18 +92,18 @@ def execute_entrypoint(
     command = files_dict[ENTRYPOINT_FILE]
 #    traceback.print_stack()
     print()
-    print(
-        colored(
-            "Do you want to execute this code? (Y/n)",
-            "red",
-        )
-    )
+    # print(
+    #     colored(
+    #         "Do you want to execute this code? (Y/n)",
+    #         "red",
+    #     )
+    # )
     print()
     print(command)
     print()
-    if input("").lower() not in ["", "y", "yes"]:
-        print("Ok, not executing the code.")
-        return files_dict
+    # if input("").lower() not in ["", "y", "yes"]:
+    #     print("Ok, not executing the code.")
+    #     return files_dict
     print("Executing the code...")
     print()
     print(

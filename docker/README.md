@@ -5,7 +5,7 @@
 Building the image:
 - `git clone https://github.com/AntonOsika/gpt-engineer.git`
 - `cd gpt-engineer`
-- `docker build --rm -t ghcr.io/jinyoung/gpt-engineer:v2 -f docker/Dockerfile .`
+- `docker build --rm -t ghcr.io/jinyoung/gpt-engineer:v3 -f docker/Dockerfile .`
 
 Running the container:
 - `docker run -it --rm -e OPENAI_API_KEY="YOUR OPENAI KEY" -v ./your-project:/project gpt-engineer`
