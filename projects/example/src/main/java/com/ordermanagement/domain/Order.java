@@ -1,10 +1,6 @@
 package com.ordermanagement.domain;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,16 +12,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String 주문번호;
+    private String 주문상태;
 
-    private String orderNumber;
-    
-    @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
+    public Order(String 메뉴, String 배송주소) {
+        // Generate 주문번호 and set initial 주문상태
+        this.주문번호 = generateOrderNumber();
+        this.주문상태 = "ORDERED";
+        // Additional logic for 메뉴 and 배송주소 can be added here
+    }
 
-    public Order(String orderNumber, OrderStatus orderStatus) {
-        this.orderNumber = orderNumber;
-        this.orderStatus = orderStatus;
+    private String generateOrderNumber() {
+        // This should be replaced with a proper order number generation strategy
+        return String.valueOf(System.currentTimeMillis());
     }
 }
