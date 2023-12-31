@@ -115,6 +115,15 @@ class CliAgent(BaseAgent):
         )
         combined_dict = {**files_dict, **entrypoint}
         files_dict = FilesDict(combined_dict)
+        # files_dict = self.process_code_fn(
+        #     self.ai,
+        #     self.execution_env,
+        #     files_dict,
+        #     preprompts_holder=self.preprompts_holder,
+        # )
+        return files_dict
+
+    def heal(self, files_dict: FilesDict) -> FilesDict:
         files_dict = self.process_code_fn(
             self.ai,
             self.execution_env,
