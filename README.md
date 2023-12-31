@@ -40,6 +40,25 @@ poetry export -f requirements.txt -o requirements.txt --without-hashes
 
 And create a launch.json:
 ```
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "my-project",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "module": "gpt_engineer.applications.cli.main",
+            "args": ["projects/example", "-sh"],
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
+```
+
+Set the Python Interpereter with the path from this command:
+```
+poetry debug info
 
 ```
 
