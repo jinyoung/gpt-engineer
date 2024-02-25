@@ -1,2 +1,0 @@
-mvn clean package   # To clean and build the application
-java -jar target/helloworld-1.0-SNAPSHOT.jar   # To run the built JAR file

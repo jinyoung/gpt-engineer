@@ -1,2 +1,5 @@
-mvn clean install --no-transfer-progress
-./run.sh &
+# Install Maven dependencies
+mvn clean install
+
+# Run the application
+mvn spring-boot:run

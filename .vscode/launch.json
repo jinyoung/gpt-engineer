@@ -7,7 +7,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "module": "gpt_engineer.applications.cli.main",
-            "args": ["projects/example", "-sh"],
+            "args": ["projects/example"],// "-sh"],
             "envFile": "${workspaceFolder}/.env"
         }
     ]

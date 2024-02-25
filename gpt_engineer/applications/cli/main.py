@@ -195,7 +195,7 @@ def main(
     else:
         files_dict = agent.init(prompt)
         store.upload(files_dict)
-        files_dict = agent.heal(files_dict)
+        #files_dict = agent.heal(files_dict)
 
     store.upload(files_dict)
 
